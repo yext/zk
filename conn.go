@@ -391,6 +391,7 @@ func (c *Conn) connect() error {
 		}
 
 		c.logger.Printf("failed to connect to %s: %v", c.Server(), err)
+		time.Sleep(250 * time.Millisecond)
 	}
 }
 
